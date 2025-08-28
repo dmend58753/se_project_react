@@ -1,0 +1,127 @@
+/* Modal styles for all modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.modal_is-opened {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal__container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.15);
+  position: relative;
+  padding: 28px 28px 36px 28px;
+  max-width: 496px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__container_type_form {
+  /* Modifier for form modal */
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+  z-index: 1;
+}
+
+.modal__close-btn_type_form {
+  /* Modifier for form close button */
+}
+
+.modal__title {
+  margin: 0 0 24px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal__form_type_form {
+  /* Modifier for form */
+}
+
+.modal__label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 2px solid #888;
+  font-size: 1rem;
+  background: transparent;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.modal__submit-btn {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px 0;
+  border-radius: 8px;
+  background: #e0e0e0;
+  color: #888;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: not-allowed;
+  transition: background 0.2s, color 0.2s;
+}
+.modal__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.modal__legend {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.modal__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal__radio-input {
+  margin-right: 8px;
+}
+
+.modal__submit-btn_type_form {
+  /* Modifier for form submit button */
+}

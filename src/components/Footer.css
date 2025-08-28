@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 16px 20px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  font-family: 'CabinetGrotesk', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.footer__left {
+  align-self: flex-start;
+}
+
+.footer__right {
+  align-self: flex-end;
+}
