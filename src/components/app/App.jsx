@@ -7,6 +7,7 @@ import ItemModal from "../ItemCard/ItemModal";
 import { defaultClothingItems } from "../../utils/clothingItems";
 import { getWeatherData } from "../../utils/weatherApi.js";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext.js";
+import "./App.css";
 
 
 function App() {
