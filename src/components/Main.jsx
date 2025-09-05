@@ -1,4 +1,4 @@
-import WeatherCard from "../WeatherCard/WeatherCard";
+import WeatherCard from "./WeatherCard/WeatherCard";
 import ItemCard from "../components/ItemCard/ItemCard";
 import "../components/main.css";
 import { getWeatherCondition } from "../utils/weatherApi";
