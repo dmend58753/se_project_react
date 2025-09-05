@@ -1,5 +1,4 @@
 import React from "react";
-import "./Modal.css";
 
 function ItemModal({ isOpen, card, onClose }) {
   if (!card) return null;

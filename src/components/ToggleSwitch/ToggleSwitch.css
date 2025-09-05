@@ -1,0 +1,67 @@
+.toggle__switch {
+  width: 56px;
+  height: 28px;
+  border: 2px solid #7e7e7e;
+  border-radius: 20px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.toggle__switch--checkbox {
+  visibility: hidden;
+  position: absolute;
+}
+
+.toggle__switch__circle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: black;
+  top: -2px;
+  left: -2px;
+}
+
+.toggle__switch__value {
+  color: #7e7e7e;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Cabinet Grotesk, serif;
+  line-height: 1;
+}
+
+
+/* Move the black circle when checked */
+.toggle__switch--checkbox:checked ~ .toggle__switch__circle {
+  right: -2px;
+  left: unset;
+}
+
+/* Default: F is white in black circle, C is gray */
+.toggle__switch__value__left {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  transition: color 0.2s;
+  margin-right: 12px;
+}
+.toggle__switch__value__right {
+  position: relative;
+  z-index: 1;
+  color: #7e7e7e;
+  transition: color 0.2s;
+  margin-left: 4px;
+  left: -2px;
+}
+
+/* When checked: C is white in black circle, F is gray */
+.toggle__switch--checkbox:checked ~ .toggle__switch__value__left {
+  color: #7e7e7e;
+}
+.toggle__switch--checkbox:checked ~ .toggle__switch__value__right {
+  color: #fff;
+}
