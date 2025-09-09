@@ -72,7 +72,6 @@
 .modal__label {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 8px;
   display: block;
 }
 
@@ -83,12 +82,10 @@
   border-bottom: 2px solid #888;
   font-size: 1rem;
   background: transparent;
-  margin-bottom: 16px;
   outline: none;
 }
 
 .modal__submit-btn {
-  width: 100%;
   margin-top: 24px;
   padding: 12px 0;
   border-radius: 8px;
@@ -103,7 +100,7 @@
 .modal__fieldset {
   border: none;
   padding: 0;
-  margin: 0 0 24px 0;
+  margin: 0px;
 }
 
 .modal__legend {

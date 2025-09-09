@@ -1,8 +1,8 @@
 
-import logo from "../assets/Logo (1).svg";
-import avatar from "../assets/Avatar.svg";
+import logo from "../../assets/Logo (1).svg";
+import avatar from "../../assets/Avatar.svg";
 import "./Header.css";
-import ToggleSwitch from "./ToggleSwitch/ToggleSwitch";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 function Header({ onAddGarmentClick }) {
   const now = new Date();

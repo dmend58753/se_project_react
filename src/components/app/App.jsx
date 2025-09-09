@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Main from "../Main.jsx";
-import Header from "../Header";
-import Footer from "../Footer";
-import ModalWithForm from "../ModalWithForm";
+import Main from "../Main/Main.jsx";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
+import ModalWithForm from "../Modals/ModalWithForm.jsx";
 import ItemModal from "../ItemCard/ItemModal";
 import { defaultClothingItems } from "../../utils/clothingItems";
 import { getWeatherData } from "../../utils/weatherApi.js";

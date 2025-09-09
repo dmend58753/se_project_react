@@ -1,17 +1,19 @@
+
 import React from "react";
+import "./ItemModal.css";
 
 function ItemModal({ isOpen, card, onClose }) {
   if (!card) return null;
   return (
     <div className={`modal${isOpen ? " modal_is-opened" : ""}`}> 
-      <div className="modal__container" style={{ position: "relative" }}>
-        <button className="modal__close-btn" type="button" onClick={onClose} style={{ position: "absolute", top: 24, right: 24 }}>
+      <div className="modal__container">
+        <button className="modal__close-btn" type="button" onClick={onClose}>
           X
         </button>
-        <img src={card.link} alt={card.name} style={{ display: "block", width: "100%", borderRadius: "16px" }} />
-        <div className="modal__footer" style={{ background: "#fff", padding: "16px", borderRadius: "0 0 16px 16px" }}>
-          <h2 className="modal__text" style={{ margin: 0, fontWeight: 700 }}>{card.name}</h2>
-          <p className="modal__text" style={{ margin: 0 }}>{card.weather}</p>
+        <img className="modal__image" src={card.link} alt={card.name} />
+        <div className="modal__footer">
+          <h2 className="modal__text modal__text_bold">{card.name}</h2>
+          <p className="modal__text">{card.weather}</p>
         </div>
       </div>
     </div>

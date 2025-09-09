@@ -24,6 +24,7 @@
   background-color: black;
   top: -2px;
   left: -2px;
+  transition: left 0.3s;
 }
 
 .toggle__switch__value {
@@ -37,8 +38,7 @@
 
 /* Move the black circle when checked */
 .toggle__switch--checkbox:checked ~ .toggle__switch__circle {
-  right: -2px;
-  left: unset;
+  left: 27px;
 }
 
 /* Default: F is white in black circle, C is gray */

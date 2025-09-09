@@ -1,0 +1,29 @@
+.modal__container {
+  position: relative;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.modal__image {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.modal__footer {
+  background: #fff;
+  padding: 16px;
+  border-radius: 0 0 16px 16px;
+}
+
+.modal__text {
+  margin: 0;
+}
+
+.modal__text_bold {
+  font-weight: 700;
+}
