@@ -32,10 +32,6 @@
   flex-direction: column;
 }
 
-.modal__container_type_form {
-  /* Modifier for form modal */
-}
-
 .modal__close-btn {
   position: absolute;
   top: 28px;
@@ -46,10 +42,6 @@
   cursor: pointer;
   color: #888;
   z-index: 1;
-}
-
-.modal__close-btn_type_form {
-  /* Modifier for form close button */
 }
 
 .modal__title {
@@ -63,10 +55,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.modal__form_type_form {
-  /* Modifier for form */
 }
 
 .modal__label {
@@ -87,7 +75,7 @@
 
 .modal__submit-btn {
   margin-top: 24px;
-  padding: 12px 0;
+  padding: 8px 16px;
   border-radius: 8px;
   background: #e0e0e0;
   color: #888;
@@ -96,6 +84,7 @@
   border: none;
   cursor: not-allowed;
   transition: background 0.2s, color 0.2s;
+  width: fit-content;
 }
 .modal__fieldset {
   border: none;
