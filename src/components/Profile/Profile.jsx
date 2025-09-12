@@ -2,7 +2,7 @@ import React from "react";
 import "./Profile.css";
 import ProfileSidebar from "./ProfileSidebar";
 import ProfileCloseSection from "./ProfileCloseSection";
-
+import ClothesSection from "./ClothesSection";
 
 
 function Profile({ clothingItems, onCardClick, onAddGarmentClick }) {
@@ -10,10 +10,11 @@ function Profile({ clothingItems, onCardClick, onAddGarmentClick }) {
     <main className="profile">
       <ProfileSidebar />
       <ProfileCloseSection 
-      clothingItems={clothingItems} 
-      onCardClick={onCardClick}
-      onAddGarmentClick={onAddGarmentClick}
+        clothingItems={clothingItems} 
+        onCardClick={onCardClick}
+        onAddGarmentClick={onAddGarmentClick}
       />
+      <ClothesSection />
     </main>
   );
 }
