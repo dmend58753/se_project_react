@@ -82,7 +82,7 @@
   font-size: 1rem;
   font-weight: 700;
   border: none;
-  cursor: not-allowed;
+  cursor: pointer;
   transition: background 0.2s, color 0.2s;
   width: fit-content;
 }
@@ -108,6 +108,19 @@
   margin-right: 8px;
 }
 
-.modal__submit-btn_type_form {
-  /* Modifier for form submit button */
+
+.modal__delete-btn {
+  color: #FF4D00;
+    background: #FFF;
+    border: none;
+    position: absolute;
+    top: 400px;
+    right: 60px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0;
+    width: auto;
+    height: auto;
 }
+

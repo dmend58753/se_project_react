@@ -6,7 +6,7 @@ function ItemCard({ data, onCardClick }) {
     <div className="card" onClick={() => onCardClick(data)}>
       <img
         className="card__image"
-        src={data.link}
+        src={data.imageUrl}
         alt={data.name}
       />
       <h2 className="card__title">{data.name}</h2>

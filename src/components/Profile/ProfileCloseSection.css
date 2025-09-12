@@ -1,0 +1,31 @@
+.close-section {
+  flex-grow: 1;
+}
+
+.close-section__row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.close-section__text {
+  font-weight: 700;
+}
+
+.close-section__button {
+  border: none;
+  background: white;
+  font-family: "CabinetGrotesk", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.close-section__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
