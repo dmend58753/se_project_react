@@ -4,16 +4,16 @@ import ProfileSidebar from "./ProfileSidebar";
 import ProfileCloseSection from "./ProfileCloseSection";
 import ClothesSection from "./ClothesSection";
 
-
 function Profile({ clothingItems, onCardClick, onAddGarmentClick }) {
   return (
     <main className="profile">
       <ProfileSidebar />
-      <ProfileCloseSection 
-        clothingItems={clothingItems} 
+      <ProfileCloseSection
+        clothingItems={clothingItems}
         onCardClick={onCardClick}
         onAddGarmentClick={onAddGarmentClick}
       />
+      <ClothesSection clothingItems={clothingItems} onCardClick={onCardClick} />
     </main>
   );
 }
