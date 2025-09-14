@@ -3,10 +3,17 @@
 }
 
 .item-modal__close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: darkgray;
+    z-index: 1;
 }
+
 
 .item-modal__image {
   display: block;
