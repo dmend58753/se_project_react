@@ -14,7 +14,6 @@ function Profile({ clothingItems, onCardClick, onAddGarmentClick }) {
         onCardClick={onCardClick}
         onAddGarmentClick={onAddGarmentClick}
       />
-      <ClothesSection />
     </main>
   );
 }

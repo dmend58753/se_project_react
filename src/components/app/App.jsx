@@ -4,12 +4,12 @@ import Main from "../Main/Main.jsx";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 import ItemModal from "../ItemCard/ItemModal";
-import { getWeatherData, getItems, addItem, deleteItem } from "../../utils/weatherApi.js";
+import { getWeatherData} from "../../utils/weatherApi.js";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext.js";
 import "./App.css";
 import Profile from "../Profile/Profile.jsx";
 import AddItemModal from "../AddItemModal/AddItemModal.jsx";
-
+import { addItem, getItems, deleteItem } from "../../utils/api";
 
 function App() {
   const [clothingItems, setClothingItems] = useState([]);

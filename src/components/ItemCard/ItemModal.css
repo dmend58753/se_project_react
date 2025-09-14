@@ -1,38 +1,37 @@
-.modal__container {
+
+.item-modal__container {
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
-.modal__close-btn {
+.item-modal__close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
 }
 
-.modal__image {
+.item-modal__image {
   display: block;
   width: 100%;
   height: 340px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 16px 16px 0 0;
   background: #f5f5f5;
 }
 
-.modal__footer {
+.item-modal__footer {
   background: #fff;
   padding: 16px;
   border-radius: 0 0 16px 16px;
 }
 
-.modal__text {
+.item-modal__text {
   font-size: 24px;
   margin: 8px 0;
   color: #333;
   font-weight: 700;
 }
 
-.modal__text_bold {
+.item-modal__text_bold {
   font-weight: 700;
   font-size: 24px
 }

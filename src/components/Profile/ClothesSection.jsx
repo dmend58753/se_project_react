@@ -1,5 +1,5 @@
 import React from "react";
-import { defaultClothingItems } from "../../utils/clothingItems";
+import { defaultClothingItems } from "../../utils/clothingItems.js";
 
 function ClothesSection() {
 	return (
