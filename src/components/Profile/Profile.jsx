@@ -8,12 +8,13 @@ function Profile({ clothingItems, onCardClick, onAddGarmentClick }) {
   return (
     <main className="profile">
       <ProfileSidebar />
-      <ProfileCloseSection
-        clothingItems={clothingItems}
+      <ProfileCloseSection 
+        clothingItems={clothingItems} 
         onCardClick={onCardClick}
         onAddGarmentClick={onAddGarmentClick}
       />
-      <ClothesSection clothingItems={clothingItems} onCardClick={onCardClick} />
+      <ClothesSection clothingItems={[]} onCardClick={onCardClick} />
+      
     </main>
   );
 }
