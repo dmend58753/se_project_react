@@ -1,11 +1,12 @@
-// Base URL for the JSON server
+
 const baseUrl = "http://localhost:3001";
 
-export function addItem({ name, imageUrl, weather }) {
+export function addItem({ name, imageUrl, weather }, token) {
   return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
       name,
@@ -33,9 +34,12 @@ export function getItems() {
   });
 }
 
-export function deleteItem(id) {
+export function deleteItem(id, token) {
   return fetch(`${baseUrl}/items/${id}`, {
     method: "DELETE",
+    headers: {
+      authorization: `Bearer ${token}`,
+    },
   }).then((res) => {
     if (res.ok) {
       return res.json();

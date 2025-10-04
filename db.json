@@ -1,4 +1,41 @@
 {
+  "users": [
+    {
+      "name": "dm",
+      "email": "hello123@gmail.com",
+      "password": "Apple123!",
+      "avatar": "/src/assets/Avatar.svg",
+      "_id": 1
+    },
+    {
+      "name": "dm",
+      "email": "hello123@gmail.com",
+      "password": "Apple123!",
+      "avatar": "/src/assets/Avatar.svg",
+      "_id": 2
+    },
+    {
+      "name": "dm",
+      "email": "hello123@gmail.com",
+      "password": "Apple123!",
+      "avatar": "/src/assets/Avatar.svg",
+      "_id": 3
+    },
+    {
+      "name": "dm",
+      "email": "hello123@gmail.com",
+      "password": "Apple123!",
+      "avatar": "/src/assets/Avatar.svg",
+      "_id": 4
+    },
+    {
+      "name": "dm",
+      "email": "hello123@gmail.com",
+      "password": "Apple123!",
+      "avatar": "/src/assets/Avatar.svg",
+      "_id": 5
+    }
+  ],
   "items": [
     {
       "_id": 1,
@@ -91,10 +128,10 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sweatshirt.png?etag=008a9674757bea2e0bdb31242e364be0"
     },
     {
-      "name": "Choes",
+      "name": "choes",
       "imageUrl": "https://i.pinimg.com/474x/11/e8/9a/11e89ad853aaaf58199d1835a846da7b--strange-fashion-eye-jewelry.jpg",
       "weather": "hot",
-      "_id": 17
+      "_id": 18
     }
   ]
 }

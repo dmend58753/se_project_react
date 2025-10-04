@@ -10,7 +10,14 @@ function AddItemModal({ isOpen, onClose, onSubmit, }) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted with values:", values);
+    console.log("AddItemModal - Form submitted with values:", values);
+    
+    // Check if required fields are filled
+    if (!values.name || !values.imageUrl) {
+      console.error("Missing required fields:", { name: values.name, imageUrl: values.imageUrl });
+      return;
+    }
+    
     onSubmit(values);
   };
 
