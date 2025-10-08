@@ -51,12 +51,10 @@ function Header({ onAddGarmentClick, isLoggedIn, onRegisterClick, onLoginClick, 
             </button>
             <Link to="/profile" className="header__link">
               <p className="header__username">{currentUser?.name || "User"}</p>
-              {currentUser?.avatar ? (
+              {currentUser?.avatar && currentUser.avatar !== "" ? (
                 <img src={currentUser.avatar} alt={currentUser.name} className="header__avatar" />
               ) : (
-                <div className="header__avatar-placeholder">
-                  {currentUser?.name?.charAt(0)?.toUpperCase() || "U"}
-                </div>
+                <img src={avatar} alt="Default Avatar" className="header__avatar" />
               )}
             </Link>
           </>

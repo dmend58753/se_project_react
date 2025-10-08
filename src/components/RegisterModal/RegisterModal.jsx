@@ -1,7 +1,7 @@
 import ModalWithForm from "../Modals/ModalWithForm";
 import { useForm } from "../../hooks/useForm.js";
 
-function RegisterModal({ isOpen, onClose, onSubmit }) {
+function RegisterModal({ isOpen, onClose, onSubmit, onLoginClick }) {
   const { values, handleChange } = useForm({
     name: "",
     avatar: "",
@@ -79,6 +79,19 @@ function RegisterModal({ isOpen, onClose, onSubmit }) {
           />
         </label>
       </fieldset>
+      <div className="modal__alt-action">
+        <span>Already have an account? </span>
+        <button 
+          type="button" 
+          className="modal__alt-action-btn"
+          onClick={() => {
+            onClose();
+            onLoginClick();
+          }}
+        >
+          Log in
+        </button>
+      </div>
     </ModalWithForm>
   );
 }

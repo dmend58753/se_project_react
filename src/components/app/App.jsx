@@ -12,8 +12,10 @@ import Profile from "../Profile/Profile.jsx";
 import AddItemModal from "../AddItemModal/AddItemModal.jsx";
 import RegisterModal from "../RegisterModal/RegisterModal.jsx";
 import LoginModal from "../LoginModal/LoginModal.jsx";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.jsx";
 import { addItem, getItems, deleteItem } from "../../utils/api";
 import { signUp, signIn, checkToken } from "../../utils/auth";
+import { defaultClothingItems } from "../../utils/clothingItems";
 
 function App() {
   const [clothingItems, setClothingItems] = useState([]);
@@ -25,7 +27,7 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [isAddGarmentModalOpen, setIsAddGarmentModalOpen] = useState(false);
 
-  // Authentication state
+ 
   const [currentUser, setCurrentUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
@@ -80,8 +82,11 @@ function App() {
 
   useEffect(() => {
     getItems()
-      .then((items) => setClothingItems(items.reverse()))
-      .catch((err) => console.error(err));
+    .then((data) => {
+setClothingItems(data);
+console.log(data);
+    })
+
   }, []);
 
   // Check for token on app load
@@ -193,19 +198,23 @@ function App() {
             <Route
               path="/profile"
               element={
-                <Profile
-                  clothingItems={clothingItems}
-                  onCardClick={handleOpenItemModal}
-                  onAddGarmentClick={handleOpenAddGarmentModal}
-                />
+                <ProtectedRoute isLoggedIn={isLoggedIn}>
+                  <Profile
+                    clothingItems={clothingItems}
+                    onCardClick={handleOpenItemModal}
+                    onAddGarmentClick={handleOpenAddGarmentModal}
+                    onSignOut={handleSignOut}
+                  />
+                </ProtectedRoute>
               }
-            ></Route>
+            />
           </Routes>
           <ItemModal
             isOpen={activeModal === "itemModal"}
             card={selectedItem}
             onClose={handleCloseItemModal}
             onDelete={handleDeleteItem}
+            isLoggedIn={isLoggedIn}
           />
 
           <AddItemModal
@@ -218,12 +227,14 @@ function App() {
             isOpen={isRegisterModalOpen}
             onClose={handleCloseRegisterModal}
             onSubmit={handleSignUp}
+            onLoginClick={handleOpenLoginModal}
           />
 
           <LoginModal
             isOpen={isLoginModalOpen}
             onClose={handleCloseLoginModal}
             onSubmit={handleSignIn}
+            onRegisterClick={handleOpenRegisterModal}
           />
 
           <Footer />

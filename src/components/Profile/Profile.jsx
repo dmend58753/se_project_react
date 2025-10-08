@@ -4,17 +4,28 @@ import ProfileSidebar from "./ProfileSidebar";
 import ProfileCloseSection from "./ProfileCloseSection";
 import ClothesSection from "./ClothesSection";
 
-function Profile({ clothingItems, onCardClick, onAddGarmentClick }) {
+function Profile({
+  clothingItems,
+  onCardClick,
+  onAddGarmentClick,
+  onSignOut,
+  onEditProfile,
+}) {
+  const handleEditProfile = () => {
+    console.log("Edit profile clicked");
+  };
+
   return (
     <main className="profile">
-      <ProfileSidebar />
-      <ProfileCloseSection 
-        clothingItems={clothingItems} 
+      <ProfileSidebar
+        onSignOut={onSignOut}
+        onEditProfile={onEditProfile || handleEditProfile}
+      />
+      <ProfileCloseSection
+        clothingItems={clothingItems}
         onCardClick={onCardClick}
         onAddGarmentClick={onAddGarmentClick}
       />
-      <ClothesSection clothingItems={[]} onCardClick={onCardClick} />
-      
     </main>
   );
 }

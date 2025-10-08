@@ -20,3 +20,33 @@
   font-weight: 700;
 }
 
+.sidebar__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.sidebar__btn {
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  color: #000;
+}
+
+.sidebar__btn_type_edit {
+  font-weight: 500;
+}
+
+.sidebar__btn_type_logout {
+  color: #ff4d00;
+  font-weight: 500;
+}
+
+.sidebar__btn:hover {
+  opacity: 0.7;
+}
+
