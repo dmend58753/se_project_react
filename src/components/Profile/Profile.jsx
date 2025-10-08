@@ -1,8 +1,8 @@
 import React from "react";
 import "./Profile.css";
 import ProfileSidebar from "./ProfileSidebar";
-import ProfileCloseSection from "./ProfileCloseSection";
 import ClothesSection from "./ClothesSection";
+
 
 function Profile({
   clothingItems,
@@ -21,7 +21,7 @@ function Profile({
         onSignOut={onSignOut}
         onEditProfile={onEditProfile || handleEditProfile}
       />
-      <ProfileCloseSection
+      <ClothesSection
         clothingItems={clothingItems}
         onCardClick={onCardClick}
         onAddGarmentClick={onAddGarmentClick}

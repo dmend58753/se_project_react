@@ -1,26 +1,32 @@
 import React from "react";
-import { defaultClothingItems } from "../../utils/clothingItems.js";
+import ItemCard from "../ItemCard/ItemCard";
+import "./ClothesSection.css"
+import { useContext } from "react";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
-function ClothesSection({ clothingItems = [] }) {
-  if (!clothingItems.length) return null;
+function ClothesSection({
+  clothingItems,
+  onCardClick,
+  onAddGarmentClick,
+}) {
+  const currentUser = useContext(CurrentUserContext);
   return (
-    <section className="clothes-section">
-      <h2>Clothes</h2>
-      <div className="clothes-list">
-        {defaultClothingItems.map((item) => (
-          <div key={item._id} className="clothes-item">
-            <img
-              src={item.link}
-              alt={item.name}
-              style={{ width: "80px", height: "80px", objectFit: "cover" }}
-            />
-            <div>
-              <strong>{item.name}</strong>
-            </div>
-            <div>Weather: {item.weather}</div>
-          </div>
-        ))}
+    <section className="close-section">
+      <div className="close-section__row">
+        <p className="close-section__text">Your items</p>
+        <button className="close-section__button" onClick={onAddGarmentClick}>
+          + Add new
+        </button>
       </div>
+      <ul className="close-section__card-list">
+        {clothingItems
+          .filter((item) => item.owner === currentUser._id)
+          .map((item) => (
+            <li key={item._id} className="close-section__card-item">
+              <ItemCard data={item} onCardClick={onCardClick} />
+            </li>
+          ))}
+      </ul>
     </section>
   );
 }
