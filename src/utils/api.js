@@ -1,5 +1,4 @@
-// Prefer a Vite env var, fall back to the deployed backend domain
-const baseUrl = import.meta.env.VITE_API_URL || "http://api.WTWR-dmend.ignorelist.com";
+const baseUrl = "http://34.26.112.149:3001";
 
 export function addItem({ name, imageUrl, weather }, token) {
   return fetch(`${baseUrl}/items`, {
