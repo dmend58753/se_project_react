@@ -221,6 +221,7 @@ console.log(data);
             isOpen={isAddGarmentModalOpen}
             onClose={handleCloseAddGarmentModal}
             onSubmit={handleAddGarmentSubmit}
+            clothingItems={clothingItems}
           />
 
           <RegisterModal

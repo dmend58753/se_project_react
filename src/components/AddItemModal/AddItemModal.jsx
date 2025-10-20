@@ -1,7 +1,7 @@
 import ModalWithForm from "../Modals/ModalWithForm";
 import { useForm } from "../../hooks/useForm.js";
 
-function AddItemModal({ isOpen, onClose, onSubmit, }) {
+function AddItemModal({ isOpen, onClose, onSubmit, clothingItems }) {
   const { values, handleChange } = useForm({
     name: "",
     imageUrl: "",
