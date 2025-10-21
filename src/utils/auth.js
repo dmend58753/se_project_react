@@ -1,4 +1,4 @@
-const baseUrl = "http://34.26.112.149:3001";
+const baseUrl = "https://api.wtwr-dmend.ignorelist.com";
 
 const processServerResponse = (res) => {
   if (res.ok) {
