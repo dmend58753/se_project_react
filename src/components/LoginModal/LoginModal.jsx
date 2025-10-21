@@ -18,7 +18,6 @@ function LoginModal({ isOpen, onClose, onSubmit, onRegisterClick }) {
       onClose={onClose}
       onSubmit={handleFormSubmit}
       title="Log in"
-      buttonText="Log in"
       name="login-form"
     >
       <fieldset className="modal__fieldset">
@@ -49,17 +48,19 @@ function LoginModal({ isOpen, onClose, onSubmit, onRegisterClick }) {
           />
         </label>
       </fieldset>
-      <div className="modal__alt-action">
-        <span>or </span>
-        <button 
-          type="button" 
+      <div className="modal__button-row">
+        <button type="submit" className="modal__submit-btn">
+          Log in
+        </button>
+        <button
+          type="button"
           className="modal__alt-action-btn"
           onClick={() => {
             onClose();
             onRegisterClick();
           }}
         >
-          Sign up
+          or Sign up
         </button>
       </div>
     </ModalWithForm>

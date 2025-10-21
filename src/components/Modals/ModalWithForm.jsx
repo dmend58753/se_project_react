@@ -26,12 +26,14 @@ function ModalWithForm({
           name={name}
         >
           {children}
-          <button
-            className="modal__submit-btn modal__submit-btn_type_form"
-            type="submit"
-          >
-            {buttonText}
-          </button>
+          {buttonText && (
+            <button
+              className="modal__submit-btn modal__submit-btn_type_form"
+              type="submit"
+            >
+              {buttonText}
+            </button>
+          )}
         </form>
       </div>
     </div>

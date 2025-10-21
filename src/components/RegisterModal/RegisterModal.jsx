@@ -21,7 +21,6 @@ function RegisterModal({ isOpen, onClose, onSubmit, onLoginClick }) {
       onClose={onClose}
       onSubmit={handleFormSubmit}
       title="Sign up"
-      buttonText="Sign up"
       name="register-form"
     >
       <fieldset className="modal__fieldset">
@@ -79,17 +78,19 @@ function RegisterModal({ isOpen, onClose, onSubmit, onLoginClick }) {
           />
         </label>
       </fieldset>
-      <div className="modal__alt-action">
-        <span>Already have an account? </span>
-        <button 
-          type="button" 
-          className="modal__alt-action-btn"
+      <div className="modal__button-row">
+        <button type="submit" className="modal__submit-btn">
+          Sign Up
+        </button>
+        <button
+          type="button"
+          className="modal__or-login-btn"
           onClick={() => {
             onClose();
             onLoginClick();
           }}
         >
-          Log in
+          or Log In
         </button>
       </div>
     </ModalWithForm>
